@@ -62,7 +62,7 @@ public class SpaDayController {
                 "<option value = 'pedicure'>Pedicure</option>" +
                 "</select><br>" +
                 "<input type = 'submit' value = 'Submit'>" +
-                "</form>";
+                "</form>" ;
         return html;
     }
 
@@ -81,6 +81,13 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
+
+        model.addAttribute("name", name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi", manipedi);
+
+        model.addAttribute("facials", facials);
+//        model.addAttribute("facials", appropriateFacials);
 
         return "menu";
     }
